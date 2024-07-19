@@ -1,0 +1,94 @@
+:root {
+    --height: 100vh;
+    --width: 100vw;
+    --primary-color: #A8DADC; /* Light pastel blue */
+    --secondary-color: #F4A261; /* Light pastel orange */
+    --button-bg-color: #E9C46A; /* Light pastel yellow */
+    --button-hover-color: #F7D1BA; /* Light pastel peach */
+    --button-text-color: #264653; /* Darker shade for contrast */
+    --font-family: 'Arial', sans-serif;
+    --card-bg: #FEF9EF; /* Light pastel beige */
+    --gradient-start: #FAD2E1; /* Light pastel pink */
+    --gradient-end: #C3E5E0; /* Light pastel mint */
+    --category-bg: #FFDDD2; /* Light pastel coral */
+    --category-text-color: #264653; /* Darker shade for contrast */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: var(--height);
+    width: var(--width);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    font-family: var(--font-family);
+}
+
+.card {
+    background-color: var(--card-bg);
+    height: 60%;
+    width: 80%;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.Category {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--category-bg);
+    color: var(--category-text-color);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.QuoteBox {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+.btn {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--button-hover-color);
+    transform: scale(1.05);
+}
+
+.Quote {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.author {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    align-self: flex-end;
+    margin-top: 1rem;
+    text-align: right;
+    width: 100%;
+}
