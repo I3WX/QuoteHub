@@ -12,6 +12,9 @@
     --gradient-end: #C3E5E0; /* Light pastel mint */
     --category-bg: #FFDDD2; /* Light pastel coral */
     --category-text-color: #264653; /* Darker shade for contrast */
+    --generate-btn-bg-color: #FF6B6B; /* Bold color for distinction */
+    --generate-btn-hover-color: #ffba6b; /* Darker shade for hover */
+    --generate-btn-text-color: #FFFFFF; /* White text color */
 }
 
 * {
@@ -70,10 +73,29 @@ body {
     border-radius: 12px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
+    margin-top: 1rem;
 }
 
 .btn:hover {
     background-color: var(--button-hover-color);
+    transform: scale(1.05);
+}
+
+.generate-quote-btn {
+    background-color: var(--generate-btn-bg-color);
+    color: var(--generate-btn-text-color);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.generate-quote-btn:hover {
+    background-color: var(--generate-btn-hover-color);
     transform: scale(1.05);
 }
 
