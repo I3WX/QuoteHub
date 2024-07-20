@@ -90,7 +90,7 @@ let fetchQuote = async function(category) {
 
 function updateData(quote,author){
   Quote.innerHTML = quote
-  Author.innerHTML = author
+  Author.innerHTML = `:- ${author}`
 }
 
 async function  updateQuote(quoteCategory){

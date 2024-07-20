@@ -113,6 +113,7 @@ body {
     margin-top: 1rem;
     text-align: right;
     width: 100%;
+    padding-right: 5%;
 }
 
 @media (max-width: 768px) {
@@ -162,6 +163,7 @@ body {
 
     .author {
         font-size: 1rem;
+        padding: 0;
     }
 
     .btn {
