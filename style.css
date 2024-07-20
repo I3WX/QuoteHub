@@ -46,7 +46,7 @@ body {
 
 .Category {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 1rem;
     background-color: var(--category-bg);
@@ -113,4 +113,64 @@ body {
     margin-top: 1rem;
     text-align: right;
     width: 100%;
+}
+
+@media (max-width: 768px) {
+    .card {
+        height: 70%;
+        width: 90%;
+    }
+
+    .Category {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        overflow-y: hidden;
+    }
+
+    .Category .btn {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .QuoteBox {
+        padding: 1rem;
+    }
+
+    .generate-quote-btn {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        height: 80%;
+        width: 95%;
+    }
+
+    .Category {
+        height: 50%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+    }
+
+    .Quote {
+        font-size: 1.2rem;
+    }
+
+    .author {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .generate-quote-btn {
+        padding: 0.4rem 1rem;
+        font-size: 1rem;
+    }
 }

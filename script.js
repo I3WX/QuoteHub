@@ -9,8 +9,9 @@ const famousBtn = document.getElementById('famous');
 const humorBtn = document.getElementById('humor');
 const loveBtn = document.getElementById('love');
 const moviesBtn = document.getElementById('movies');
+const datingBtn = document.getElementById('dating');
 const Author = document.getElementById('author')
-const avlCategory = ["sad","alone","art","death","dreams","famous","humor","love","movies"]
+const avlCategory = ["sad","dating","alone","art","death","dreams","famous","humor","love","movies"]
 let category = '';
 
 sadBtn.addEventListener('click', () => {
@@ -30,6 +31,11 @@ artBtn.addEventListener('click', () => {
 
 deathBtn.addEventListener('click', () => {
   category = 'death';
+  updateQuote(category)
+});
+
+datingBtn.addEventListener('click', () => {
+  category = 'dating';
   updateQuote(category)
 });
 
@@ -86,12 +92,14 @@ function updateData(quote,author){
   Quote.innerHTML = quote
   Author.innerHTML = author
 }
+
 async function  updateQuote(quoteCategory){
   let data = await fetchQuote(quoteCategory)
   let quote = data[0].quote
   let author = data[0].author
   updateData(quote,author)
 }
+
 generateQuoteBtn.addEventListener('click',   ()=>{
   let quoteCategory
   if (category !== undefined &&  category !== null){
